@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>100 HTML Tags Showcase</title>
+
+  <style>
+    /* --- RESET & GLOBAL STYLE --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #e0eafc);
+      color: #333;
+      padding: 30px;
+    }
+    header, footer, section, nav, aside, article {
+      background: #fff;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+    }
+    header:hover, footer:hover, section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #5b21b6;
+    }
+    h1, h2, h3, h4, h5 {
+      margin-bottom: 15px;
+      color: #4f46e5;
+    }
+    p {
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    ul, ol, dl {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    form input, form textarea, form select, form button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #4f46e5;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #4338ca;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    th {
+      background: #4f46e5;
+      color: white;
+    }
+    details {
+      margin: 10px 0;
+      padding: 10px;
+      background: #e0e7ff;
+      border-radius: 8px;
+    }
+    blockquote {
+      margin: 20px 0;
+      padding-left: 15px;
+      border-left: 4px solid #6366f1;
+      color: #555;
+      font-style: italic;
+    }
+    progress, meter {
+      width: 100%;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+    .highlight {
+      background: #facc15;
+      padding: 2px 6px;
+      border-radius: 5px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .card:hover {
+      background: #f0f0ff;
+      transform: translateY(-8px);
+    }
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  </style>
+
+<style>
+ /* Alert Box */
+ .alert {
+      padding: 20px;
+      background-color: #f87171;
+      color: white;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      animation: shake 0.5s;
+    }
+    @keyframes shake {
+      0% {transform: translateX(0);}
+      25% {transform: translateX(-5px);}
+      50% {transform: translateX(5px);}
+      75% {transform: translateX(-5px);}
+      100% {transform: translateX(0);}
+    }
+
+    /* Marquee */
+    .marquee {
+      background: #c7d2fe;
+      padding: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee p {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 10s linear infinite;
+    }
+    @keyframes marquee {
+      from {transform: translateX(0);}
+      to {transform: translateX(-100%);}
+    }
+  
+    /* Rainbow Text */
+    .rainbow-text {
+      background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 400%;
+      font-weight: bold;
+      background-clip: text;           /* Standard */
+      -webkit-background-clip: text;    /* Untuk browser berbasis Webkit (Chrome, Safari) */
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 8s linear infinite;
+    }
+    @keyframes rainbow {
+      0% {background-position: 0%;}
+      100% {background-position: 100%;}
+    }
+  /* Accordion Style */
+  .accordion details {
+    background: #eef2ff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .accordion details[open] {
+    background: #c7d2fe;
+  }
+  .accordion summary {
+    font-weight: bold;
+    font-size: 1.1rem;
+    list-style: none;
+  }
+  
+  /* Fancy Progress Bar */
+  .progress-container {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .progress-bar {
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    height: 30px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    animation: progress-animation 2s infinite alternate;
+  }
+  @keyframes progress-animation {
+    from { background-position: 0%;}
+    to { background-position: 100%;}
+  }
+  
+  /* Stylish Meter */
+  .meter-container meter {
+    width: 100%;
+    height: 25px;
+    background: #e5e7eb;
+    border-radius: 8px;
+    appearance: none;
+  }
+  meter::-webkit-meter-bar {
+    background: #e5e7eb;
+    border-radius: 8px;
+  }
+  meter::-webkit-meter-optimum-value {
+    background: linear-gradient(90deg, #34d399, #10b981);
+    border-radius: 8px;
+  }
+  meter::-webkit-meter-suboptimum-value {
+    background: #facc15;
+  }
+  meter::-webkit-meter-even-less-good-value {
+    background: #ef4444;
+  }
+  
+  /* Modal Dialog */
+  dialog {
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    animation: fadeIn 0.3s ease-out;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+  }
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  </style>
+  
+</head>
+
+<body>
+
+<header>
+  <h1>Tugas 100 HTML Umi Kalsum</h1>
+  <nav>
+    <a href="#">Home</a> |
+    <a href="#">About</a> |
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h2>Text Elements</h2>
+    <p>This is <strong>bold</strong>, <em>italic</em>, <u>underline</u>, and <s>strikethrough</s>.</p>
+    <blockquote>Dream big. Start small. Act now.</blockquote>
+    <p><abbr title="World Health Organization">WHO</abbr> is important!</p>
+    <p><mark class="highlight">Important Highlighted Text</mark></p>
+    <address>123, Anywhere Street, City</address>
+    <pre>
+&lt;h1&gt;Hello World&lt;/h1&gt;
+    </pre>
+    <code>console.log("Hello, World!");</code>
+  </section>
+
+  <section>
+    <h2>Lists</h2>
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Orange</li>
+    </ul>
+    <ol>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+    </ol>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Hyper Text Markup Language</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Media</h2>
+    <figure>
+      <img src="https://via.placeholder.com/400x200" alt="Placeholder Image">
+      <figcaption>Example Image</figcaption>
+    </figure>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+    <video controls width="400">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section>
+    <h2>Forms</h2>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <select>
+        <option>Choose Option</option>
+        <option>Web Design</option>
+        <option>Development</option>
+      </select>
+      <input type="checkbox" id="subscribe">
+      <label for="subscribe">Subscribe to newsletter</label><br>
+      <input type="radio" id="male" name="gender">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender">
+      <label for="female">Female</label><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Tables</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Robert</td>
+          <td>Yonathan</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>Grande</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Interactive Components</h2>
+  
+    <!-- Accordion (Details) -->
+    <div class="accordion">
+      <details>
+        <summary>🌟 What's New?</summary>
+        <p>We've added new features and improvements to make your experience awesome!</p>
+      </details>
+      <details>
+        <summary>🎯 Goals for 2025</summary>
+        <p>Expand our service worldwide and improve our customer support by 200%.</p>
+      </details>
+    </div>
+  
+    <!-- Fancy Progress Bar -->
+    <h3 style="margin-top: 30px;">Project Progress</h3>
+    <div class="progress-container">
+      <div class="progress-bar" style="width: 80%;">80%</div>
+    </div>
+  
+    <!-- Stylish Meter -->
+    <h3 style="margin-top: 30px;">Server Load</h3>
+    <div class="meter-container">
+      <meter value="0.7" min="0" max="1" optimum="0.5" low="0.8" high="0.9">70%</meter>
+      <p>70% usage - running smooth ✅</p>
+    </div>
+  
+    <!-- Modal Dialog -->
+    <h3 style="margin-top: 30px;">Blog </h3>
+    <button onclick="document.getElementById('myDialog').showModal()">Open</button>
+  
+    <dialog id="myDialog">
+      <h3>🌟 Welcome!</h3>
+      <p>This is my blog. Thanks for visiting!</p>
+      <button onclick="document.getElementById('myDialog').close()">Close</button>
+    </dialog>
+  
+  </section>
+  
+  <section>
+    <h2>Semantic Elements</h2>
+    <article class="card">
+      <h3>Article Title</h3>
+      <p>Article content that describes an independent item.</p>
+    </article>
+    <aside class="card">
+      <h4>Related Content</h4>
+      <p>Additional information like sidebar notes.</p>
+    </aside>
+    <aside class="card">
+        <h4>Related Links</h4>
+        <ul>
+          <li><a href="#">HTML Tutorial</a></li>
+          <li><a href="#">CSS Tutorial</a></li>
+        </ul>
+    </aside>
+  </section>
+
+  <!-- Alert Box -->
+  <div class="alert">
+    🚨 Warning! Make sure to save your work.
+  </div>
+
+  <!-- Marquee Text -->
+<div class="marquee">
+    <p>🔥 Umi Kalsum - 220907500013! 🔥</p>
+  </div>
+  
+  <!-- Rainbow Text -->
+<div>
+  <h1 class="rainbow-text">Welcome to the Future!</h1>
+</div>
+
+  <section class="flex">
+    <div class="card">
+      <h3>&lt;header&gt;</h3>
+      <p>Defines a header section.</p>
+    </div>
+    <div class="card">
+      <h3>&lt;section&gt;</h3>
+      <p>Divides content into sections.</p>
+    </div>
+    <div class="card">
+      <h3>&lt;footer&gt;</h3>
+      <p>Defines the footer of a document.</p>
+    </div>
+    <div class="card">
+      <h3>&lt;nav&gt;</h3>
+      <p>Defines navigation links.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+    <p>© 2025 | Bisnis Digital 💜 by Umi Kalsum.</p>
+  </footer>
+  
+  </body>
+  </html>
+
